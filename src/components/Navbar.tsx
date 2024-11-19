@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingCart, Sparkles, Menu, X } from 'lucide-react';
+import { ShoppingCart, Sparkles, Menu, X, Package, Image } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useCartStore } from '../store/cartStore';
 import Cart from './Cart';
@@ -26,7 +26,15 @@ export default function Navbar() {
               <Link to="/" className="hover:text-purple-400 transition-colors">Home</Link>
               <Link to="/shop" className="hover:text-purple-400 transition-colors">Shop</Link>
               <Link to="/custom" className="hover:text-purple-400 transition-colors">Custom Orders</Link>
+              <Link to="/gallery" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                <Image className="h-5 w-5" />
+                Gallery
+              </Link>
               <Link to="/contact" className="hover:text-purple-400 transition-colors">Contact</Link>
+              <Link to="/orders" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                <Package className="h-5 w-5" />
+                Orders
+              </Link>
               <button 
                 className="relative"
                 onClick={() => setIsCartOpen(!isCartOpen)}
@@ -56,7 +64,9 @@ export default function Navbar() {
             <Link to="/" className="block px-3 py-2 hover:text-purple-400 transition-colors">Home</Link>
             <Link to="/shop" className="block px-3 py-2 hover:text-purple-400 transition-colors">Shop</Link>
             <Link to="/custom" className="block px-3 py-2 hover:text-purple-400 transition-colors">Custom Orders</Link>
+            <Link to="/gallery" className="block px-3 py-2 hover:text-purple-400 transition-colors">Gallery</Link>
             <Link to="/contact" className="block px-3 py-2 hover:text-purple-400 transition-colors">Contact</Link>
+            <Link to="/orders" className="block px-3 py-2 hover:text-purple-400 transition-colors">Orders</Link>
           </div>
         </div>
       )}

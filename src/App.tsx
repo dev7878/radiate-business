@@ -7,8 +7,10 @@ import Custom from './pages/Custom';
 import Contact from './pages/Contact';
 import Checkout from './pages/Checkout';
 import CheckoutSuccess from './pages/CheckoutSuccess';
+import Orders from './pages/Orders';
+import Gallery from './pages/Gallery';
 
-function App() {
+export default function App() {
   return (
     <Router>
       <div className="min-h-screen bg-black text-white">
@@ -20,10 +22,10 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/checkout/success" element={<CheckoutSuccess />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </div>
     </Router>
   );
 }
-
-export default App;
